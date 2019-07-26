@@ -169,6 +169,6 @@ public class Jukebox implements Runnable, ActionListener {
 
 		Scared.play();
 		
-		if(pause.)
+		
 	}
 }
