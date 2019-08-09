@@ -13,7 +13,7 @@ public class SHAHFLIX {
 
 void flix() {
 	JLabel Label = new JLabel();
-	JButton Button = loadImage("download.jpg");
+	//JButton Button = loadImage("download.jpg");
 	JFrame Frame = new JFrame();
 	JPanel Panel = new JPanel();
 	
@@ -36,8 +36,8 @@ shah.flix();
 	
 }
 private JButton loadImage(String fileName) {
-	URL imageURL = getClass().getResource(fileName);
-	Icon icon = new ImageIcon(imageURL);
+URL imageURL = getClass().getResource(fileName);
+Icon icon = new ImageIcon(imageURL);
 	return new JButton(icon);
 }
 
