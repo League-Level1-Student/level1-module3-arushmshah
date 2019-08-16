@@ -3,9 +3,9 @@ void setup(){
   
 }
 int x=120;
-int y=275;
-int birdYVelocity = 30;
-int gravity = 1;
+float y=275;
+float birdYVelocity = 1;
+float gravity = 0.2;
 int pipeX=230;
 int upperPipeHeight = (int) random(100, 350);
 int gap = 85;
@@ -25,7 +25,8 @@ void draw(){
 fill(244, 215, 66);
 stroke(0,0,0);
 ellipse(x, y, 30, 20);
-y=y+gravity;
+birdYVelocity+=gravity;
+y=y+birdYVelocity;
 fill(12, 178, 42);
 rect(pipeX, 0, 45, upperPipeHeight);
 pipeX-=2;
@@ -51,7 +52,7 @@ void teleportPipes(){
 
 
 void mousePressed(){
-  y=y-birdYVelocity;
+  birdYVelocity=-5;
 }
 
 boolean intersectsPipes() { 
